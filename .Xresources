@@ -1,0 +1,143 @@
+! X colors.
+*foreground:        #d7d2ce
+*background:        #03142C
+*.foreground:       #d7d2ce
+*.background:       #03142C
+emacs*foreground:   #d7d2ce
+emacs*background:   #03142C
+URxvt*foreground:   #d7d2ce
+XTerm*foreground:   #d7d2ce
+UXTerm*foreground:  #d7d2ce
+URxvt*background:   [95]#03142C
+XTerm*background:   #03142C
+UXTerm*background:  #03142C
+URxvt*cursorColor:  #d7d2ce
+XTerm*cursorColor:  #d7d2ce
+UXTerm*cursorColor: #d7d2ce
+URxvt*borderColor:  [95]#03142C
+
+! Colors 0-15.
+*.color0: #03142C
+*color0:  #03142C
+*.color1: #EAAD79
+*color1:  #EAAD79
+*.color2: #1E6D8B
+*color2:  #1E6D8B
+*.color3: #606F88
+*color3:  #606F88
+*.color4: #2D94A8
+*color4:  #2D94A8
+*.color5: #5AA6B1
+*color5:  #5AA6B1
+*.color6: #57BDC8
+*color6:  #57BDC8
+*.color7: #d7d2ce
+*color7:  #d7d2ce
+*.color8: #969390
+*color8:  #969390
+*.color9: #EAAD79
+*color9:  #EAAD79
+*.color10: #1E6D8B
+*color10:  #1E6D8B
+*.color11: #606F88
+*color11:  #606F88
+*.color12: #2D94A8
+*color12:  #2D94A8
+*.color13: #5AA6B1
+*color13:  #5AA6B1
+*.color14: #57BDC8
+*color14:  #57BDC8
+*.color15: #d7d2ce
+*color15:  #d7d2ce
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #03142C
+*color66:  #03142C
+
+! Xclock colors.
+XClock*foreground: #d7d2ce
+XClock*background: #03142C
+XClock*majorColor:  rgba:d7/d2/ce/ff
+XClock*minorColor:  rgba:d7/d2/ce/ff
+XClock*hourColor:   rgba:d7/d2/ce/ff
+XClock*minuteColor: rgba:d7/d2/ce/ff
+XClock*secondColor: rgba:d7/d2/ce/ff
+
+! ------------------------------------------------------------------------------
+! Font configuration
+! ------------------------------------------------------------------------------
+
+URxvt.allow_bold:     true
+URxvt*font:           xft:source code pro for powerline:regular:pixelsize=13
+URxvt*imFont:         xft:source code pro for powerline:regular:pixelsize=13
+URxvt*boldFont:       xft:source code pro for powerline:semibold:pixelsize=13
+URxvt*italicFont:     xft:source code pro for powerline:italic:pixelsize=13
+URxvt*boldItalicFont: xft:source code pro for powerline:semibold:italic:pixelsize=13
+
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! ------------------------------------------------------------------------------
+! URxvt configs
+! ------------------------------------------------------------------------------
+
+! font spacing
+URxvt*letterSpace:              -1
+URxvt.lineSpace:                0
+
+! general settings
+URxvt*saveline:                 15000
+URxvt*termName:                 rxvt-256color
+URxvt*iso14755:                 false
+URxvt*urgentOnBell:             true
+
+! appearance
+URxvt*depth:                    32
+URxvt*scrollBar:                false
+URxvt*scrollBar_right:          false
+URxvt*internalBorder:           8
+URxvt*externalBorder:           0
+URxvt.geometry:                 84x22
+
+! perl extensions
+URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select
+
+! macros for clipboard and selection
+URxvt.copyCommand:              xclip -i -selection clipboard
+URxvt.pasteCommand:             xclip -o -selection clipboard
+URxvt.keysym.M-c:               perl:clipboard:copy
+URxvt.keysym.M-v:               perl:clipboard:paste
+URxvt.keysym.M-C-v:             perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape:          perl:keyboard-select:activate
+URxvt.keysym.M-s:               perl:keyboard-select:search
+URxvt.keysym.M-u:               perl:url-select:select_next
+URxvt.urlLauncher:              firefox
+URxvt.underlineURLs:            true
+URxvt.urlButton:                1
+
+! scroll one line
+URxvt.keysym.Shift-Up:          command:\033]720;1\007
+URxvt.keysym.Shift-Down:        command:\033]721;1\007
+
+! control arrow
+URxvt.keysym.Control-Up:        \033[1;5A
+URxvt.keysym.Control-Down:      \033[1;5B
+URxvt.keysym.Control-Right:     \033[1;5C
+URxvt.keysym.Control-Left:      \033[1;5D
+
+! ------------------------------------------------------------------------------
+! Dmenu configs
+! ------------------------------------------------------------------------------
+
+dmenu.selforeground:            #d7d2ce
+dmenu.background:               #d7d2ce
+dmenu.selbackground:            #EAAD79
+dmenu.foreground:               #03142C
